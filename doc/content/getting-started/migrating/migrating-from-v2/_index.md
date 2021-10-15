@@ -56,8 +56,9 @@ then your uplink payload formatter function in {{% tts %}} should be:
 function decodeUplink(input) {
     var bytes = input.bytes;
     var temperature = bytes[0] | bytes[2];
-    return {
+    return {data:{
         temperature: temperature;
+        }
     }
 }
 ```
